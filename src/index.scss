@@ -1,0 +1,6 @@
+@import './styles/common.scss';
+
+.app {
+    background-color: $pink;
+    @include ellipsis;
+}
