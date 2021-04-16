@@ -29,6 +29,10 @@ module.exports = {
             test: /\.scss$/,
             include: path.join(__dirname, '../src'),
             use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        }, {
+            test: /\.less$/,
+            include: path.join(__dirname, '../src'),
+            use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
         }]
     },
     plugins: [
