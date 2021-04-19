@@ -1,0 +1,67 @@
+{
+  "name": "lightup_sleep",
+  "version": "1.0.0",
+  "description": "lightup sleep",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint app.js ./src/**/*.js ./src/*.js",
+    "cov": "nyc report --reporter=text-summary",
+    "nyc:cov": "NODE_ENV=ci nyc ava && nyc report --reporter=html",
+    "nyc": "NODE_ENV=ci nyc ava",
+    "test": "NODE_ENV=ci ava",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.gf.com.cn:10022/hanyiding/fastify-kick-off.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "http://gitlab.gf.com.cn/hanyiding/fastify-kick-off",
+  "dependencies": {
+    "@hapi/boom": "^9.1.0",
+    "@sentry/node": "^5.15.5",
+    "axios": "^0.19.2",
+    "ding-env-config": "^1.2.0",
+    "ding-res-msg": "^1.3.1",
+    "fastify": "^2.14.0",
+    "fastify-cookie": "^3.6.1",
+    "fastify-plugin": "^1.6.1",
+    "fastify-swagger": "^2.5.1",
+    "fastify-url-data": "^2.4.0",
+    "fluent-json-schema": "^2.0.4",
+    "interface-cacher": "^0.5.1",
+    "ioredis": "^4.16.3",
+    "knex": "^0.95.4",
+    "lodash": "^4.17.15",
+    "moment": "^2.25.3",
+    "mongoose": "^5.9.12",
+    "nanoid": "^3.1.5",
+    "oracledb": "^5.1.0",
+    "pino": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.150",
+    "@types/mongoose": "^5.7.15",
+    "@types/node": "^13.13.5",
+    "ava": "^3.8.1",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nyc": "^15.0.1"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.test.js",
+      "test/*.test.js"
+    ],
+    "concurrency": 25,
+    "serial": true,
+    "failFast": true
+  }
+}
